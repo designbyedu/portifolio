@@ -1,5 +1,9 @@
- const form = document.getElementById('form');
+// Import WhatsApp number from config.js
+import { WHATSAPP_NUMBER } from './config.js';
 
+const form = document.getElementById('form');
+
+if (form) {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
@@ -11,8 +15,7 @@
             return;
         }
 
-        // Replace with your WhatsApp number (including country and area code, without dashes or spaces)
-        const telefone = '5542999269931';
+        const telefone = WHATSAPP_NUMBER;
 
         const texto = `Olá, meu nome é ${nome}.\n${mensagem}`;
         const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
@@ -22,3 +25,23 @@
             alert('Não foi possível abrir o WhatsApp. Por favor, verifique se o bloqueador de pop-ups está ativado.');
         }
     });
+}
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        toggle.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Fecha o menu ao clicar em um link
+    menu.querySelectorAll('.menu-link').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            toggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+}
