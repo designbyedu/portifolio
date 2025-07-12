@@ -227,7 +227,7 @@ h1 {
     padding: 2rem;
 }
 
-.projeto-card{
+.projeto-card {
     backdrop-filter: blur(5px);
     background-color: var(--vidro);
     border-radius: 15px;
@@ -235,13 +235,36 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
     border: 1px solid var(--vidro);
     box-shadow: 0 0 30px rgba(110, 98, 98, 0.5);
     overflow: hidden;
     transition: transform 0.9s ease, box-shadow 2s ease;
     cursor: pointer;
+    min-width: 0;
+    height: 100%;
+}
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: stretch;
+}
+
+@media (max-width: 900px) {
+    .projetos-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .projeto-card {
+        padding-bottom: 2rem;
+    }
 }
 
 .caixa-textos-projeto {
