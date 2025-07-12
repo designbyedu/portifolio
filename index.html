@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>DevCode - Portifólio</title>
+    <title>MediaLife - Portifólio</title>
 </head>
 
 <body>
@@ -56,33 +56,33 @@
                     <div class="caixa-textos-projeto">
                         <h3 class="titulo-projetos">Social Midia - Casa de Construções</h3>
                         <p class="paragrafo-projetos">Arte criada para uma casa de construções chamada <b>Casa
-                                Forte</b>, em
-                            formato de carrosel.</p>
+                                Forte</b>, em formato de carrosel.</p>
+                        <p class="clique">Clique e vá direto ao meu perfil da Behance</p>
                     </div>
+                </div>
             </a>
-        </div>
-        <a href="https://www.behance.net/gallery/230004811/Projeto-Mercado-Moveis" target="_blank">
-            <div class="projeto-card">
-                <img src="assets/projeto2.png" alt="Imagem Comercial" class="projeto-imagem">
-                <div class="caixa-textos-projeto">
-                    <h3 class="titulo-projetos">Social Midia - Mercado Móveis</h3>
-                    <p class="paragrafo-projetos">Arte criada para divulgar uma promoção do <b>Mercado Móveis</b>,
-                        em
-                        formato de carrosel.</p>
+            <a href="https://www.behance.net/gallery/230004811/Projeto-Mercado-Moveis" target="_blank">
+                <div class="projeto-card">
+                    <img src="assets/projeto2.png" alt="Imagem Comercial" class="projeto-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h3 class="titulo-projetos">Social Midia - Mercado Móveis</h3>
+                        <p class="paragrafo-projetos">Arte criada para divulgar uma promoção do <b>Mercado Móveis</b>,
+                            em formato de carrosel.</p>
+                        <p class="clique">Clique e vá direto ao meu perfil da Behance</p>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <a href="https://www.behance.net/gallery/230005489/Projeto-Dia-dos-Pais-Mercado-Moveis" target="_blank">
-            <div class="projeto-card">
-                <img src="assets/projeto3.png" alt="Imagem Comercial" class="projeto-imagem">
-                <div class="caixa-textos-projeto">
-                    <h3 class="titulo-projetos">Social Midia - Dia dos Pais (Lojas MM)</h3>
-                    <p class="paragrafo-projetos">Arte criada para divulgação do dia dos Pais nas <b>Lojas MM</b>,
-                        para
-                        publicação nas midias sociais.</p>
+            </a>
+            <a href="https://www.behance.net/gallery/230005489/Projeto-Dia-dos-Pais-Mercado-Moveis" target="_blank">
+                <div class="projeto-card">
+                    <img src="assets/projeto3.png" alt="Imagem Comercial" class="projeto-imagem">
+                    <div class="caixa-textos-projeto">
+                        <h3 class="titulo-projetos">Social Midia - Dia dos Pais (Lojas MM)</h3>
+                        <p class="paragrafo-projetos">Arte criada para divulgação do dia dos Pais nas <b>Lojas MM</b>,
+                            para publicação nas midias sociais.</p>
+                        <p class="clique">Clique e vá direto ao meu perfil da Behance</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
         </div>
     </section>
     <section>
@@ -100,16 +100,21 @@
         </div>
     </section>
     <section id="contact" class="contact">
-        <h2 class="contatos-titulos">Contatos</h2>
-        <form action="" class="form-contato" id="form">
+        <h2 class="contatos-titulos">Entre em contato</h2>
+        <form class="form-contato" id="form">
             <div class="grupo-form">
                 <input type="text" placeholder="Nome" class="campo-form" id="nome" required>
             </div>
             <div class="grupo-form">
-                <textarea placeholder="Digite sua mensagem" class="text-form" required></textarea>
+                <textarea placeholder="Digite sua mensagem" class="text-form" id="mensagem" required></textarea>
             </div>
+            <button type="submit" class="btn-form">Enviar pelo WhatsApp</button>
         </form>
     </section>
+    <footer class="footer">
+        <p class="footer-texto">© 2023 MediaLife - Todos os direitos reservados.</p>
+        <p class="footer-texto">Desenvolvido por Eduardo Oliveira</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>
