@@ -36,8 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Substitua pelo seu número do WhatsApp (com DDI + DDD, sem traços ou espaços)
         const telefone = '5542999269931';
 
-        const texto = `Olá, meu nome é ${nome}.%0A${mensagem}`;
-        const url = `https://wa.me/${telefone}?text=${texto}`;
+        const mensagemFormatada = mensagem.replace(/\r?\n/g, '\n'); // garante quebras corretas
+        const texto = `Olá, meu nome é ${nome}.\n${mensagemFormatada}`;
+        const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
 
         window.open(url, '_blank');
     });
