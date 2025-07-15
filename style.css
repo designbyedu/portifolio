@@ -165,6 +165,7 @@ section.header {
 }
 
 .home {
+    margin-top: 3rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -350,10 +351,11 @@ h1 {
 }
 
 .footer {
-    background-color: var(--escuro);
-    color: var(--claro);
+    background: linear-gradient(125deg, var(--primaria), var(--secundaria));
+    color: #fff;
+    border-radius: 10px;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 /* Serviços Section */
@@ -415,6 +417,7 @@ h1 {
     transform: scale(1.05);
     background: linear-gradient(90deg, var(--primaria), var(--secundaria));
     color: #fff;
+    border-radius: 10px;
 }
 
 /* Contact Section */
@@ -827,4 +830,22 @@ h1 {
 .menu-toggle.active .hamburger::after {
     transform: rotate(-45deg);
     bottom: 0;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 10px rgba(100, 100, 255, 0.5));
+    }
+
+    50% {
+        transform: translateY(-15px);
+        filter: drop-shadow(0 10px 20px rgba(100, 100, 255, 0.7));
+    }
 }
