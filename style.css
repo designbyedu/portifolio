@@ -606,19 +606,20 @@ h1 {
     }
 
     .foto {
+        margin: 0 auto;
         width: 250px;
         height: 250px;
         box-shadow: 0 0 20px rgba(248, 176, 176, 0.4);
     }
 
     .container-home h1 {
-        font-size: 2.1rem;
-        margin: 1rem 1rem 1rem 4rem;
+        font-size: 1.99rem;
+        margin: 1rem auto;
     }
 
     .subtitulo {
-        font-size: 1.1rem;
-        margin: 0.3rem 0 1rem 1rem;
+        font-size: 1.2rem;
+        margin: 1rem auto;
     }
 
     /* ABOUT */
