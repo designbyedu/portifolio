@@ -1,51 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+// WhatsApp form
+const form = document.getElementById('form');
 
-    if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            toggle.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-        // Fecha o menu ao clicar em um link
-        menu.querySelectorAll('.menu-link').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('active');
-                toggle.classList.remove('active');
-                document.body.classList.remove('menu-open');
-            });
-        });
+    const nome = document.getElementById('nome').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !mensagem) {
+        alert('Por favor, preencha todos os campos.');
+        return;
     }
 
-    // WhatsApp form
-    const form = document.getElementById('form');
+    // Substitua pelo seu número do WhatsApp (com DDI + DDD, sem traços ou espaços)
+    const telefone = '5542999269931';
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    const mensagemFormatada = mensagem.replace(/\r?\n/g, '\n'); // garante quebras corretas
+    const texto = `Olá, meu nome é ${nome}.\n${mensagemFormatada}`;
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
 
-        const nome = document.getElementById('nome').value.trim();
-        const mensagem = document.getElementById('mensagem').value.trim();
+    window.open(url, '_blank');
+});
 
-        if (!nome || !mensagem) {
-            alert('Por favor, preencha todos os campos.');
-            return;
-        }
+// Botão Hamburguer
+const menuToggle = document.querySelector('.menu-toggle');
+const navegation = document.querySelector('.navegation');
 
-        // Substitua pelo seu número do WhatsApp (com DDI + DDD, sem traços ou espaços)
-        const telefone = '5542999269931';
-
-        const mensagemFormatada = mensagem.replace(/\r?\n/g, '\n'); // garante quebras corretas
-        const texto = `Olá, meu nome é ${nome}.\n${mensagemFormatada}`;
-        const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
-
-        window.open(url, '_blank');
-    });
-
-    toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-        toggle.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-    });
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navegation.classList.toggle('active');
 });

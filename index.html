@@ -18,20 +18,25 @@
     <header>
         <section class="header">
             <div class="logo">
-                <img src="assets/logo-nobackground-white.png" alt="Logo MediaLife" class="logo">
+                <!-- Sua logo aqui -->
+                <img src="assets/logo-nobackground-white.png" alt="Logo" width="70" />
             </div>
-            <nav class="navegation">
-                <div class="menu-toggle" id="menu-toggle">
 
-                </div>
-                <ul class="menu" id="menu">
-                    <li><a class="menu-link" href="#about">Sobre</a></li>
-                    <li><a class="menu-link" href="#projects">Projetos</a></li>
-                    <li><a class="menu-link" href="#contact">Contato</a></li>
-                    <li><a class="menu-link" href="#work">Serviços</a></li>
-                    <li><a class="menu-link" href="#home">Início</a></li>
+            <!-- Botão hamburguer -->
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="navegation">
+                <ul class="menu">
+                    <li><a href="#home" class="menu-link">Home</a></li>
+                    <li><a href="#about" class="menu-link">Sobre</a></li>
+                    <li><a href="#projects" class="menu-link">Projetos</a></li>
+                    <li><a href="#services" class="menu-link">Serviços</a></li>
+                    <li><a href="#contact" class="menu-link">Contato</a></li>
                 </ul>
             </nav>
+
             <div class="icons-container">
                 <a href="https://github.com/designbyedu" target="_blank" class="icon-link"><img src="assets/github.png"
                         alt="Github-Icons" class="icon"></a>
@@ -94,17 +99,17 @@
             </a>
         </div>
     </section>
-    <section>
+    <section class="services" id="services">
         <div>
             <h2 class="servicos-titulo" id="work">Serviços</h2>
             <p class="servicos-paragrafo">Ofereço uma variedade de serviços de design e desenvolvimento web, incluindo:
             </p>
             <ul class="servicos-lista">
-                <li>Criação de Identidade Visual</li>
-                <li>Desenvolvimento de Sites Responsivos</li>
-                <li>Gerenciamento de Redes Sociais</li>
-                <li>Criação de Conteúdo para Social Media</li>
-                <li>Consultoria em Design Gráfico</li>
+                <li><a class="services-a" href="#contact">Criação de Identidade Visual</a></li>
+                <li><a class="services-a" href="#contact">Desenvolvimento de Sites Responsivos</a></li>
+                <li><a class="services-a" href="#contact">Gerenciamento de Redes Sociais</a></li>
+                <li><a class="services-a" href="#contact">Criação de Conteúdo para Social Media</a></li>
+                <li><a class="services-a" href="#contact">Consultoria em Design Gráfico</a></li>
             </ul>
         </div>
     </section>
